@@ -1,0 +1,12 @@
+:root {
+    --colorbg: lightgreen;
+    --colorh1: black
+  }
+  
+  body {
+    font-family: 'Livvic', sans-serif;
+    background: var(--colorbg);
+    color: var(--colorh1);
+    text-align: center;
+  }
+  
