@@ -38,6 +38,12 @@ const quoteBox = [
     
     let nRandom = Math.floor((Math.random() * quoteBox.length) + 1);
   
+    let twitter_link = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' 
+
+    // Add quote and author
+    twitter_link += encodeURIComponent('"' + quoteBox[nRandom-1].quote + '" ' + quoteBox[nRandom-1].author) 
+
+    document.getElementById("tweet-quote").href = twitter_link;
     document.getElementById("text").innerText = quoteBox[nRandom-1].quote;
     document.getElementById("author").innerText = quoteBox[nRandom-1].author;
   }

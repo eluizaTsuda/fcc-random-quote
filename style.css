@@ -10,14 +10,61 @@ body {
     text-align: center;
 }
   
+
 #quote-box {
+    margin: auto;
     border-radius: 4px;
     position: relative;
     width: 385px;
     padding: 80px 50px;
     display: table;
-    background-color: #fff;
+    background-color: rgb(240, 236, 236);
 }
-      
 
-  
+.q-text {
+    i {
+      font-size: 0.2em;
+      margin-right: 0.4em;
+    }
+    text-align: center;
+    width: 450px;
+    height: auto;
+    clear: both;
+    font-weight: 500;
+    font-size: 1.00em;
+}
+
+.q-author {
+    width: 450px;
+    height: auto;
+    clear: both;
+    padding-top: 50px;
+    font-size: 0.75em;
+    text-align: right;
+}
+
+.buttons {
+    width: 450px;
+    margin: auto;
+    display: block;
+}
+.button {
+    height: 38px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #333;
+    outline: none;
+    font-size: 0.65em;
+    padding: 8px 18px 6px 18px;
+    margin-top: 30px;
+    opacity: 1;
+    cursor: pointer;
+    &:hover {
+    opacity: 0.9;
+    }
+    &#tweet-q,
+    &#new-quote {
+    float: right;
+    }
+}  
