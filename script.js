@@ -32,18 +32,18 @@ const quoteBox =   [
 ];
 
 var colors = [
-  '#16a085',
-  '#27ae60',
-  '#2c3e50',
-  '#f39c12',
-  '#e74c3c',
-  '#9b59b6',
-  '#FB6964',
-  '#342224',
-  '#472E32',
-  '#BDBB99',
-  '#77B1A9',
-  '#73A857'
+  '#87617c', // Mostly desaturated dark pink.
+  '#699669', // Mostly desaturated dark lime green.
+  '#696996', // Mostly desaturated dark blue.
+  '#966980', // Mostly desaturated dark pink.
+  '#969669', // Mostly desaturated dark yellow.
+  '#966969', // Mostly desaturated dark red.
+  '#e63e00', // Pure (or mostly pure) orange.
+  '#e6b100', // Pure (or mostly pure) yellow.
+  '#79a079', // Dark grayish lime green.
+  '#7b95a0', // Dark grayish blue.
+  '#b3b34c', // Moderate yellow
+  '#4cb3b3'  // Moderate cyan.
 ];
   
 document.getElementsByTagName("h1")[0].style.fontSize = "3vw";
@@ -62,19 +62,33 @@ function newQuote() {
   document.getElementById("text").innerText = quoteBox[nRandom-1].quote;
   document.getElementById("author").innerText = `- ` + quoteBox[nRandom-1].author;
 
+  // Color change - jQuery
 
   var color = Math.floor(Math.random() * colors.length);
-  $('html body').animate(
-    {
-      backgroundColor: colors[color],
-      color: colors[color]
-    },
-    1000
-  );
-  $('.button').animate(
-    {
-      backgroundColor: colors[color]
-    },
-    1000
-  );
+
+
+    $('html body').animate(
+      {
+        backgroundColor: colors[color],
+        color: colors[color]
+      },
+      "5000"
+    );
+
+
+    $('.button').animate(
+      {
+        backgroundColor: colors[color],
+
+        opacity: '0.5',        
+
+
+      },
+      "5000"
+    );
+
+
+    $(".quote-title").css("color", "white");
+
+
 }

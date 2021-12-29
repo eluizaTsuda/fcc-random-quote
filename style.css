@@ -1,39 +1,44 @@
 :root {
-    --colorbg: lightgreen;
-    --colorh1: black
+    --color-white: #fff; 
+    --color-blue: #86afff;
 }
   
 body {
-    font-family: 'Livvic', sans-serif;
-    background: var(--colorbg);
-    color: var(--colorh1);
+    font-family: 'Satisfy','Livvic', sans-serif;
+    background: var(--color-blue);
+    color: var(--color-white);
     text-align: center;
 }
 
 
-
-
+.quote-title {
+    padding: 50px;
+}
 .q-text {
-    i {
-      font-size: 0.2em;
-      margin-right: 0.4em;
-    }
     text-align: center;
-    width: 450px;
     height: auto;
     clear: both;
-    font-weight: 500;
-    font-size: 1.00em;
+    font-weight: 300;
+    font-size: 1em;
 }
 
 .q-author {
-    width: 1050px;
+    text-align: right;
+    padding-top: 25px;
+    padding-bottom: 50px;
     height: auto;
     clear: both;
-    padding-top: 50px;
-    padding-left: 450px;
-    font-size: 0.75em;
-    text-align: right;
+    font-size: 0.65em;
+
+}
+.button {
+    font-size: 0.7em;
+    opacity: 1;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 18px 6px 18px;
+    color: var(--color-white);
+    background-color: var(--color-blue);
 }
 /*
 .buttons {
