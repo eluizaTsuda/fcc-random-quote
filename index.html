@@ -37,27 +37,33 @@
         <div class="container mt-5">
             <h1 class="quote-title">👋 Random Quote Machine 👩‍💻<h1> 
             <div class="card">
-                <div class="card-body">
-                    <div id="text" class="q-text">
-                    </div>
-                    
-                    <div id="author" class="q-author">
-                    </div>
-                
-                    <div class="buttons">
-                        <a
-                            id="tweet-quote"  
-                            class="button fa fa-twitter"
-                            title="Tweet this quote!"
-                            target="_blank">
-                        </a>
-                        <button 
-                            id="new-quote" 
-                            class="button" 
-                            onClick="newQuote();">New quote
-                        </button>
-                    </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-2">
+                    <i id="quote-left" inserclass="fa fa-quote-left fa-3x"></i>
+                  </div>
+
+                  <div id="text" class="q-text, col-sm-10"> 
+                  </div>
+                                  
+                  <div id="author" class="q-author">
+                  </div>
+
+                  <div class="buttons">
+                    <a
+                      id="tweet-quote"  
+                      class="button fa fa-twitter"
+                      title="Tweet this quote!"
+                      target="_blank">
+                    </a>
+                    <button 
+                      id="new-quote" 
+                      class="button" 
+                      onClick="newQuote();">New quote
+                    </button>
+                  </div>
                 </div>
+              </div>
             </div>
         </div>
     </wrapper>

@@ -80,7 +80,7 @@ function newQuote() {
       {
         backgroundColor: colors[color],
 
-        opacity: '0.5',        
+        opacity: '0.5'       
 
 
       },
@@ -89,6 +89,12 @@ function newQuote() {
 
 
     $(".quote-title").css("color", "white");
+
+    $("#quote-left").animate(
+      {
+        opacity: '0.3'
+      }
+    )
 
 
 }
