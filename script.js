@@ -67,34 +67,31 @@ function newQuote() {
   var color = Math.floor(Math.random() * colors.length);
 
 
-    $('html body').animate(
-      {
-        backgroundColor: colors[color],
-        color: colors[color]
-      },
-      "5000"
-    );
+  $('html body').animate(
+    {
+      backgroundColor: colors[color],
+      color: colors[color]
+    },
+    "5000"
+  );
 
 
-    $('.button').animate(
-      {
-        backgroundColor: colors[color],
+  $('.button').animate(
+    {backgroundColor: colors[color],opacity: '0.5'},"5000");
+    
 
-        opacity: '0.5'       
-
-
-      },
-      "5000"
-    );
+  $(".quote-title").css("color", "white");
 
 
-    $(".quote-title").css("color", "white");
+  $(".button").click(function(){
+    var qleft = $(".quote-left");
+    qleft.animate({opacity: '0.8'},"slow");
+    qleft.animate({opacity: '0.5'},"slow");
+  });
 
-    $("#quote-left").animate(
-      {
-        opacity: '0.3'
-      }
-    )
-
-
+  $(".button").click(function(){
+    var qright = $(".quote-right");
+    qright.animate({opacity: '0.5'},"slow");
+    qright.animate({opacity: '0.8'},"slow");
+  });
 }
