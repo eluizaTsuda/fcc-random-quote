@@ -2,17 +2,25 @@
     --color-white: #fff; 
     --color-blue: #86afff;
 }
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
   
 body {
-    font-family: 'Satisfy','Livvic', sans-serif;
     background: var(--color-blue);
     color: var(--color-white);
     text-align: center;
+    font-size: 1em;
+
 }
 
-
-.quote-title {
+.quoteeee-title {
     padding: 50px;
+    font-size: 1em;
 
 }
 .q-text {
@@ -20,7 +28,8 @@ body {
     height: auto;
     clear: both;
     font-weight: 300;
-    font-size: 1em;
+    font-size: 2em;
+    color:black;
 }
 
 .q-author {
@@ -29,18 +38,30 @@ body {
     padding-bottom: 50px;
     height: auto;
     clear: both;
-    font-size: 0.65em;
+    font-size: 1.5em;
+    color:black;
 
 }
 .button {
-    font-size: 0.7em;
+    font-size: 1.5em;
     opacity: 1;
     border: none;
     border-radius: 10px;
     padding: 8px 18px 6px 18px;
     color: var(--color-white);
     background-color: var(--color-blue);
+
 }
+
+.button:hover {
+    background-color: yellow;
+    transition: background-color 1s;
+  }
+.button:active {
+    background-color:green;
+  }
+
+
 /*
 .buttons {
     width: 450px;

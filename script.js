@@ -46,21 +46,17 @@ var colors = [
   '#4cb3b3'  // Moderate cyan.
 ];
   
-document.getElementsByTagName("h1")[0].style.fontSize = "3vw";
+let text = document.getElementById("text");
+let author = document.getElementById("author");
+let btnNewQuote = document.getElementById("new-quote");
   
   
 function newQuote() {
   
+  // Quote - text and author
   let nRandom = Math.floor((Math.random() * quoteBox.length) + 1);
-
-  let twitter_link = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' 
-
-  // Add quote and author
-  twitter_link += encodeURIComponent('"' + quoteBox[nRandom-1].quote + '" ' + quoteBox[nRandom-1].author) 
-
-  document.getElementById("tweet-quote").href = twitter_link;
-  document.getElementById("text").innerText = quoteBox[nRandom-1].quote;
-  document.getElementById("author").innerText = `- ` + quoteBox[nRandom-1].author;
+  text.innerText = quoteBox[nRandom-1].quote;
+  author.innerText = `- ` + quoteBox[nRandom-1].author;
 
   // Color change - jQuery
 
@@ -87,7 +83,7 @@ function newQuote() {
     var qleft = $(".quote-left");
     qleft.animate({opacity: '0.8'},"slow");
     qleft.animate({opacity: '0.5'},"slow");
-  });
+ });
 
   $(".button").click(function(){
     var qright = $(".quote-right");
@@ -95,3 +91,15 @@ function newQuote() {
     qright.animate({opacity: '0.8'},"slow");
   });
 }
+
+function quoteTwitter() {
+  let twitter_link = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' 
+
+  // Add quote and author
+  twitter_link += encodeURIComponent('"' + quoteBox[nRandom-1].quote + '" ' + quoteBox[nRandom-1].author) 
+
+  document.getElementById("tweet-quote").href = twitter_link;
+}
+
+window.addEventListener("load", newQuote);
+btnNewQuote.addEventListener("click", newQuote);
