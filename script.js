@@ -58,10 +58,15 @@ function newQuote() {
   text.innerText = quoteBox[nRandom-1].quote;
   author.innerText = `- ` + quoteBox[nRandom-1].author;
 
+  // Tweet quote
+  let twitter_link = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' 
+
+  twitter_link += encodeURIComponent('"' + quoteBox[nRandom-1].quote + '" ' + quoteBox[nRandom-1].author) 
+
+  document.getElementById("tweet-quote").href = twitter_link;
+  
   // Color change - jQuery
-
   var color = Math.floor(Math.random() * colors.length);
-
 
   $('html body').animate(
     {
@@ -74,18 +79,7 @@ function newQuote() {
 
   $('blockquote').animate(
     { borderLeftColor: colors[color]}, 500);
-    
-}
-
-function quoteTwitter() {
-  let twitter_link = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' 
-
-  // Add quote and author
-  twitter_link += encodeURIComponent('"' + quoteBox[nRandom-1].quote + '" ' + quoteBox[nRandom-1].author) 
-
-  document.getElementById("tweet-quote").href = twitter_link;
 }
 
 window.addEventListener("load", newQuote);
 btnNewQuote.addEventListener("click", newQuote);
-btnTweetQuote.addEventListener("click", quoteTwitter);
