@@ -1,6 +1,10 @@
 :root {
     --color-white: #fff; 
-    --color-blue: #86afff;
+    --color-lightGray: #cccccc;
+    --color-lightCyan:  #f9fafa;
+    --color-moderateCyan:  #4ba9c8;
+    --color-softCyan: #86c5da;
+    --color-darkSlateGray: #2f4f4f;
 }
 
 *{
@@ -11,81 +15,84 @@
 }
   
 body {
-    background: var(--color-blue);
-    color: var(--color-white);
+    background-color: var(--color-moderateCyan);
     text-align: center;
-    font-size: 1em;
+    font-size: 0.6em;
+}
+
+wrapper {
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    position:absolute;
+    transform:translate(-50%, -50%);
+}
+
+blockquote {
+    border-left: 10px solid var(--color-moderateCyan);
+    margin: 30px 10px;
+    padding: 10px 20px;
+}
+
+blockquote:before {
+    color: var(--color-lightGray);
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+.container {
+
+    width: 100%;
+    background-color:var(--color-lightCyan);
+    padding: 50px 40px;
+    box-shadow: 0 20px 65px var(--color-darkSlateGray);
+    position: relative;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container:after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 120%;
+    background-color: var(--color-lightCyan);
+    z-index: -1;
+    top: -9%;
+    left: 50%;
+}
+
+.container .button{
+    width:max-content;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color:black;
+}
+#new-quote {
+    padding: 15px 89px;
+}
+
+#tweet-quote {
+    padding: 15px 73px;
 
 }
 
-.quoteeee-title {
-    padding: 50px;
-    font-size: 1em;
-
-}
 .q-text {
     text-align: center;
     height: auto;
     clear: both;
     font-weight: 300;
     font-size: 2em;
-    color:black;
 }
 
 .q-author {
     text-align: right;
     padding-top: 25px;
-    padding-bottom: 50px;
     height: auto;
     clear: both;
     font-size: 1.5em;
-    color:black;
-
 }
-.button {
-    font-size: 1.5em;
-    opacity: 1;
-    border: none;
-    border-radius: 10px;
-    padding: 8px 18px 6px 18px;
-    color: var(--color-white);
-    background-color: var(--color-blue);
-
-}
-
-.button:hover {
-    background-color: yellow;
-    transition: background-color 1s;
-  }
-.button:active {
-    background-color:green;
-  }
-
-
-/*
-.buttons {
-    width: 450px;
-    margin: auto;
-    display: block;
-}
-.button {
-    height: 38px;
-    border: none;
-    border-radius: 3px;
-    color: #fff;
-    background-color: #333;
-    outline: none;
-    font-size: 0.65em;
-    padding: 8px 18px 6px 18px;
-    margin-top: 30px;
-    opacity: 1;
-    cursor: pointer;
-    &:hover {
-    opacity: 0.9;
-    }
-    &#tweet-q,
-    &#new-quote {
-    float: right;
-    }
-}  
-*/

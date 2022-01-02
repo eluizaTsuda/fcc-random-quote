@@ -49,7 +49,7 @@ var colors = [
 let text = document.getElementById("text");
 let author = document.getElementById("author");
 let btnNewQuote = document.getElementById("new-quote");
-  
+let btnTweetQuote = document.getElementsByClassName("tweet-quote")
   
 function newQuote() {
   
@@ -67,29 +67,14 @@ function newQuote() {
     {
       backgroundColor: colors[color],
       color: colors[color]
-    },
-    "5000"
-  );
+    },"5000");
 
-
-  $('.button').animate(
+  $('button, a').animate(
     {backgroundColor: colors[color],opacity: '0.5'},"5000");
+
+  $('blockquote').animate(
+    { borderLeftColor: colors[color]}, 500);
     
-
-  $(".quote-title").css("color", "white");
-
-
-  $(".button").click(function(){
-    var qleft = $(".quote-left");
-    qleft.animate({opacity: '0.8'},"slow");
-    qleft.animate({opacity: '0.5'},"slow");
- });
-
-  $(".button").click(function(){
-    var qright = $(".quote-right");
-    qright.animate({opacity: '0.5'},"slow");
-    qright.animate({opacity: '0.8'},"slow");
-  });
 }
 
 function quoteTwitter() {
@@ -103,3 +88,4 @@ function quoteTwitter() {
 
 window.addEventListener("load", newQuote);
 btnNewQuote.addEventListener("click", newQuote);
+btnTweetQuote.addEventListener("click", quoteTwitter);
