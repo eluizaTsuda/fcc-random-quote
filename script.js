@@ -66,6 +66,7 @@ function newQuote() {
   document.getElementById("tweet-quote").href = twitter_link;
   
   // Color change - jQuery
+ 
   var color = Math.floor(Math.random() * colors.length);
 
   $('html body').animate(
@@ -79,6 +80,7 @@ function newQuote() {
 
   $('blockquote').animate(
     { borderLeftColor: colors[color]}, 500);
+
 }
 
 window.addEventListener("load", newQuote);

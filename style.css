@@ -45,7 +45,7 @@ blockquote:before {
 
     width: 100%;
     background-color:var(--color-lightCyan);
-    padding: 50px 40px;
+    padding: 40px 40px;
     box-shadow: 0 20px 65px var(--color-darkSlateGray);
     position: relative;
     border-radius: 5px;
@@ -72,13 +72,18 @@ blockquote:before {
     cursor: pointer;
     color:black;
 }
+
+
 #new-quote {
     padding: 15px 89px;
+    margin-bottom: 25px;
+    background-color: coral;
 }
 
 #tweet-quote {
-    padding: 15px 73px;
-
+    background-color: rgb(106, 255, 7);
+    margin: auto;
+    padding: 13px 73px 13px;
 }
 
 .q-text {
@@ -95,4 +100,8 @@ blockquote:before {
     height: auto;
     clear: both;
     font-size: 1.5em;
+}
+
+a:link, a:visited {
+    text-decoration: none;
 }
