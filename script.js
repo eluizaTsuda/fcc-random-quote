@@ -38,33 +38,24 @@ let author = document.getElementById("author");
 let btnNewQuote = document.getElementById("new-quote");
 let tweetQuote = document.getElementById("tweet-quote");
 
-const urlQuote = "https://api.quotable.io/random";
+const urlApiQuote = "https://api.quotable.io/random";
 const urlTwitter = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' 
-var currentQuote = '';
-var currentAuthor = '';
-var contentTweet = '';
 
 function newQuote() {
-//let newQuote = () => {
-
   // Get quote and author - const quoteBox
-    let nRandom = Math.floor((Math.random() * quoteBox.length) + 1);
-    //currentQuote = quoteBox[nRandom-1].quote;
-    //currentAuthor = quoteBox[nRandom-1].author;
+    //let nRandom = Math.floor((Math.random() * quoteBox.length) + 1);
+    //text.innerText = quoteBox[nRandom-1].quote;
+    //author.innerText = quoteBox[nRandom-1].author;
+    //tweetQuote.href = urlTwitter + encodeURIComponent(quoteBox[nRandom-1].quote + " - " + quoteBox[nRandom-1].author);
 
-  
   // Get quote and author - const urlQuote
-  fetch(urlQuote)
+  fetch(urlApiQuote)
   .then((response) => response.json())
   .then((data) => {
-    currentQuote = data.content;
-    currentAuthor = data.author;
+    text.innerText = data.content;
+    author.innerText = `- ` + data.author;
+    tweetQuote.href = urlTwitter + encodeURIComponent(`${data.content} - ${data.author}`);
   })
-
-  text.innerText = currentQuote;
-  author.innerText = `- ` + currentAuthor;
-  contentTweet = encodeURIComponent(`${currentQuote} - ${currentAuthor}`) 
-  tweetQuote.href = urlTwitter + contentTweet;
 
   // Color change - jQuery
  
@@ -77,7 +68,7 @@ function newQuote() {
     },"5000");
 
   $('button, a').animate(
-    {backgroundColor: colors[color],opacity: '0.5'},"5000");
+    {backgroundColor: colors[color],opacity: '0.6'},"5000");
 
   $('blockquote').animate(
     { borderLeftColor: colors[color]}, 500);
