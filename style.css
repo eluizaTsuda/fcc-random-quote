@@ -60,7 +60,7 @@ blockquote:before {
     background-color: var(--color-lightCyan);
     z-index: -1;
     top: -9%;
-    left: 50%;
+    left: 53%;
 }
 
 .container .button{
@@ -77,11 +77,11 @@ blockquote:before {
 #new-quote {
     padding: 15px 89px;
     margin-bottom: 25px;
-    background-color: coral;
+    
 }
 
 #tweet-quote {
-    background-color: rgb(106, 255, 7);
+
     margin: auto;
     padding: 13px 73px 13px;
 }
