@@ -1,4 +1,6 @@
 :root {
+    --color-pink: #e01474;
+    --color-black: #000;
     --color-white: #fff; 
     --color-lightGray: #cccccc;
     --color-lightCyan:  #f9fafa;
@@ -18,11 +20,13 @@ body {
     background-color: var(--color-moderateCyan);
     text-align: center;
     font-size: 0.6em;
+
+    overflow: auto;
 }
 
 wrapper {
     width: 400px;
-    top: 50%;
+    top: 42%;
     left: 50%;
     position:absolute;
     transform:translate(-50%, -50%);
@@ -42,10 +46,9 @@ blockquote:before {
 }
 
 .container {
-
     width: 100%;
     background-color:var(--color-lightCyan);
-    padding: 40px 40px;
+    padding: 30px 30px;
     box-shadow: 0 20px 65px var(--color-darkSlateGray);
     position: relative;
     border-radius: 5px;
@@ -54,13 +57,14 @@ blockquote:before {
 
 .container:after {
     content: "";
-    position: absolute;
-    width: 60%;
-    height: 120%;
-    background-color: var(--color-lightCyan);
+    width: 100%;
+    height: 100%;
     z-index: -1;
-    top: -9%;
-    left: 53%;
+    top: -3%;
+    left: 4%;
+    border-radius: 5px;
+    position: absolute;
+    background-color: var(--color-lightCyan);
 }
 
 .container .button{
@@ -73,15 +77,12 @@ blockquote:before {
     color:black;
 }
 
-
 #new-quote {
     padding: 15px 89px;
     margin-bottom: 25px;
-    
 }
 
 #tweet-quote {
-
     margin: auto;
     padding: 13px 73px 13px;
 }
